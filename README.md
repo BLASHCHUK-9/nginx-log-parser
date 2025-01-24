@@ -19,6 +19,7 @@
 1. **Створіть репозиторій на GitHub**:
    - Перейдіть на GitHub і створіть новий репозиторій (наприклад, `nginx-log-parser`).
    - Скопіюйте SSH URL репозиторія (формат: `git@github.com:<your-username>/<repo-name>.git`).
+   - Також даний URL потрібно додати в скрипт 
 
 2. **Налаштуйте SSH-доступ**:
    - Створити SSH ключ:
@@ -31,7 +32,7 @@
        cat ~/.ssh/id_rsa.pub
        ```
      - Приватний ключ має розміщуватись ~/.ssh/id_rsa
-     - Перейдіть у **Settings → SSH and GPG keys** у GitHub і натисніть **New SSH key**.
+     - Перейдіть у **Settings → Deploy Keys** у GitHub і натисніть **New SSH key**.
 
 3. **Перевірте підключення до GitHub через SSH**:
    ```bash
