@@ -6,3 +6,5 @@ Instructions for running the script are available here: [README-log-pars.md](htt
 
 The Dockerfile for deploying the script in Docker is available here: [Dockerfile](https://github.com/BLASHCHUK-9/nginx-log-parser/blob/main/Dockerfile).  
 Deployment instructions are available here: [README-log-pars-docker.md](https://github.com/BLASHCHUK-9/nginx-log-parser/blob/main/README-log-pars-docker.md).
+
+The result of script execution is available here: [parsed_logs.csv](https://github.com/BLASHCHUK-9/nginx-log-parser/blob/main/parsed_logs.csv).
