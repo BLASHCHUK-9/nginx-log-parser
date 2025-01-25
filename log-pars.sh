@@ -1,30 +1,30 @@
 #!/bin/bash
 
-# Назва файлу для журналу
+# Filename for the log
 NGINX_LOG="nginx.log"
 REPO_DIR="nginx_logs_repo"
 
-# Перевіряємо, чи існує файл логів
+# Check if the log file exists
 if [[ ! -f "$NGINX_LOG" ]]; then
   echo "Error: Log file '$NGINX_LOG' not found. Please provide the log file in the same directory."
   exit 1
 fi
 
-# Створюємо директорію для результатів
+# Create a directory for the results
 mkdir -p "$REPO_DIR"
 
-# Функція для перетворення логів у CSV
+# Function for converting logs to CSV
 parse_logs_to_csv() {
   echo "Parsing logs to CSV..."
 
-  # Формуємо заголовок CSV файлу
+  # Form the header of the CSV file
   echo "IP,Requested URL,Response Code" > "$REPO_DIR/parsed_logs.csv"
 
-  # Парсимо логи і додаємо їх до CSV
+  # Parsing logs and adding them to CSV
   awk '{print $1","$7","$9}' "$NGINX_LOG" >> "$REPO_DIR/parsed_logs.csv"
 }
 
-# Функція для збереження файлів у Git
+# Function to save files to Git
 store_csv_in_git() {
   cd "$REPO_DIR"
 
@@ -42,7 +42,7 @@ store_csv_in_git() {
   cd -
 }
 
-# Викликаємо функції
+# Calling functions
 parse_logs_to_csv
 store_csv_in_git
 
