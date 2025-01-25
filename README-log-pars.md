@@ -41,10 +41,10 @@ This repository contains a script for parsing Nginx logs, converting them into C
      ```
 
 3. **Prepare the script:**
-   - Create the script `script.sh` in your server environment.
+   - Create the script `log-pars.sh` in your server environment.
    - Make it executable:
      ```bash
-     chmod +x script.sh
+     chmod +x log-pars.sh
      ```
 
 4. **Prepare the log file:**
@@ -53,7 +53,7 @@ This repository contains a script for parsing Nginx logs, converting them into C
 
 5. **Run the script:**
    ```bash
-   ./script.sh
+   ./log-pars.sh
    ```
    - The script will:
      - Check for the existence of the log file.
